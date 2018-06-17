@@ -42,7 +42,7 @@ public/assets/main.js: build
 
 public/cloud.lua: $(LUA)
 	cd src/host; \
-	lua _make.lua ../../public/cloud.lua
+	lua _make.lua $cloudCatcherServerURL ../../public/cloud.lua
 
 serve: build public/cloud.lua
 	tsc --project tsconfig.json --watch & \
